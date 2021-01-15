@@ -29,9 +29,13 @@ end
   brave = Brave.new(name: "ゆうしゃ", hp: 238, offense: 203, defense: 129)
   monster = Monster.new(name: "アークデーモン", hp: 210, offense: 140, defense: 80)
   puts "#{monster.name}があらわれた"
+ while true do
   brave.attack(monster)
   monster.attack(brave)
   puts "*=*=*=*=*=*=*=*=*=*=*"
   puts "【#{brave.name}】HP: #{brave.hp}"
   puts "【#{monster.name}】HP:#{monster.hp}"
   puts "*=*=*=*=*=*=*=*=*=*=*"
+  if monster.hp == 0
+  end
+  end
