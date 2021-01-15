@@ -11,7 +11,7 @@ end
     def attack(monster)
       puts "#{monster.name}があらわれた"
       puts "#{name}の攻撃！"
-      puts "#{monster.name}に 163 のダメージを与えた"
+      puts "#{monster.name}に #{(offense - monster.defense) / 2} のダメージを与えた"
     end
 
   end
@@ -20,7 +20,11 @@ end
   class Monster < Character
     def attack(brave)
       puts "#{name}の攻撃！"
-      puts "#{brave.name}は 76 のダメージを受けた"
+      puts "#{brave.name}は #{(offense - brave.defense) / 2} のダメージを受けた"
+    end
+
+    while (offense - brave.defense) / 2 do
+
     end
 
   end
