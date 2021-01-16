@@ -24,12 +24,11 @@ end
       puts "#{name}の攻撃！"
       puts "#{brave.name}は #{damage} のダメージを受けた"
     end
-
   end
   brave = Brave.new(name: "ゆうしゃ", hp: 238, offense: 203, defense: 129)
   monster = Monster.new(name: "アークデーモン", hp: 210, offense: 140, defense: 80)
   puts "#{monster.name}があらわれた"
- while true do
+while monster.hp >= 0 && brave.hp >= 0 do
   brave.attack(monster)
   monster.attack(brave)
   puts "*=*=*=*=*=*=*=*=*=*=*"
@@ -37,5 +36,6 @@ end
   puts "【#{monster.name}】HP:#{monster.hp}"
   puts "*=*=*=*=*=*=*=*=*=*=*"
   if monster.hp == 0
+    "#{monster.name}をやっつけた"
   end
-  end
+end
