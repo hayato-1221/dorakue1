@@ -7,7 +7,7 @@ monster = Monster.new(name: "アークデーモン", hp: 210, offense: 140, defe
 puts "#{monster.name}があらわれた"
 while monster.hp > 0 && brave.hp > 0 do
   brave.attack(monster)
-  monster.attack(brave)
+  monster.attack(brave) if monster.hp > 0
   puts <<~TEXT 
   *=*=*=*=*=*=*=*=*=*=*
   【#{brave.name}】HP: #{brave.hp}
