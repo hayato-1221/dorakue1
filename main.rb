@@ -13,6 +13,13 @@ while monster.hp > 0 && brave.hp > 0 do
   【#{brave.name}】HP: #{brave.hp}
   【#{monster.name}】HP:#{monster.hp}
   *=*=*=*=*=*=*=*=*=*=*
-  #{monster.name}をやっつけた
   TEXT
+end
+
+if monster.hp = 0
+  puts "#{monster.name}をやっつけた"
+elsif brave.hp = 0
+  puts "#{brave.name}は死んでしまった"
+else
+  ""
 end
